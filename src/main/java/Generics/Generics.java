@@ -2,6 +2,7 @@ package Generics;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public class Generics<T> {
@@ -26,6 +27,11 @@ public class Generics<T> {
     }
 
     public static void main(String[] args) throws InterruptedException {
+        // Solution
+        Solution solution = new Solution();
+//        int[] ints = solution.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8);
+        int[] ints1 = solution.searchRange(new int[]{1}, 1);
+
         List<String> strings = arrayToList(strArray, new ArrayList<>());
         List<Integer> integers = arrayToList(intArray, new ArrayList<>());
         List<Boolean> booleans = arrayToList(boolArray, new ArrayList<>());
@@ -55,6 +61,9 @@ public class Generics<T> {
         addHouseToList(houses);
 
         printBuildings(houses);
+
+        //LinkedHashMap
+        LinkedHashMap<Object, Object> phoneBook = new LinkedHashMap<>(16, 0.75f, false);
 
     }
 
